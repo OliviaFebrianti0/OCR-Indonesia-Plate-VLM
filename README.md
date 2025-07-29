@@ -4,15 +4,26 @@ Proyek ini bertujuan untuk melakukan Optical Character Recognition (OCR) pada ga
 Hasil prediksi dievaluasi menggunakan metrik Character Error Rate (CER) dan disimpan dalam file CSV untuk keperluan analisis lebih lanjut.
 
 # Struktur Folder
-OCR_Project/
-├── ocr_predict.py                # Script untuk menghasilkan ground_truth.csv dari file anotasi .txt
-├── generate_ground_truth.csv     # (Opsional) Output dari ocr_predict.py
-├── results.csv                   # Hasil prediksi model, termasuk perhitungan CER
+
+Indonesian License Plate Recognition Dataset/
+
+├── main.py                        # Script untuk kirim gambar ke LM Studio dan hasilkan hasil\_prediksi.csv
+
+├── generate\_ground\_truth\_csv.py  # Script untuk ubah label .txt menjadi ground\_truth.csv
+
 ├── test/
-│   ├── image1.jpg
-│   ├── image1.txt                # Label karakter (format YOLO)
-│   ├── ...
-│   └── ground_truth.csv          # Hasil dari ocr_predict.py
+
+│   ├── test001\_1.jpg             # Gambar plat nomor
+
+│   ├── test001\_1.txt             # Label ground truth
+
+│   └── ground\_truth.csv          # CSV berisi hasil penggabungan label
+
+├── hasil\_prediksi.csv            # File output hasil OCR + evaluasi CER
+
+├── requirement.txt
+
+└── README.md
 
 # Instalasi & Persiapan
 1. Install LM Studio
