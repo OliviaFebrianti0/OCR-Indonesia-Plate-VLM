@@ -6,6 +6,7 @@ Hasil prediksi dievaluasi menggunakan metrik Character Error Rate (CER) dan disi
 # Struktur Folder
 
 OCR_Project/
+
 ├── ocr_predict.py                # Script pembuat ground_truth.csv dari file .txt (YOLO format)
 
 ├── generate_ground_truth.csv     # (Opsional) Output dari ocr_predict.py
