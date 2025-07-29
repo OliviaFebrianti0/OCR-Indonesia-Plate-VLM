@@ -7,21 +7,21 @@ Hasil prediksi dievaluasi menggunakan metrik Character Error Rate (CER) dan disi
 
 OCR_Project/
 
-├── ocr_predict.py                # Script pembuat ground_truth.csv dari file .txt (YOLO format)
+├── ocr_predict.py                # Script untuk kirim gambar ke LM Studio dan hasilkan results.csv
 
-├── generate_ground_truth.csv     # (Opsional) Output dari ocr_predict.py
+├── generate_ground_truth.csv     # # Script untuk ubah label .txt menjadi ground_truth.csv
 
 ├── results.csv                   # Hasil prediksi + nilai CER
 
 ├── test/
 
-│   ├── test001_1.jpg             # Gambar input
+│   ├── test001_1.jpg             # Gambar plat nomor
 
-│   ├── test001_1.txt             # File label YOLO (class_id dan x_center)
+│   ├── test001_1.txt             # Label ground truth
 
 │   ├── ...
 
-│   └── ground_truth.csv          # Hasil dari ocr_predict.py
+│   └── ground_truth.csv          # CSV berisi hasil penggabungan label
 
 # Instalasi & Persiapan
 1. Install LM Studio
@@ -37,7 +37,7 @@ Masuk ke folder OCR_Project/ dan jalankan 'pip install requests pillow python-Le
 
 # Eksekusi Program
 1. Persiapan Dataset
-Letakkan file gambar .jpg dan label .txt (YOLO-style: class_id x_center ...) ke dalam folder test/.
+Letakkan file gambar .jpg dan label .txt ke dalam folder test/.
 
 2. Generate Ground Truth
 Gunakan generate_ground_truth_csv.py untuk membuat file ground_truth.csv secara otomatis dari file .txt.  Hasil akan disimpan sebagai 'test/ground_truth.csv'.
