@@ -5,25 +5,15 @@ Hasil prediksi dievaluasi menggunakan metrik Character Error Rate (CER) dan disi
 
 # Struktur Folder
 
-Indonesian License Plate Recognition Dataset/
-
-├── main.py                        # Script untuk kirim gambar ke LM Studio dan hasilkan hasil\_prediksi.csv
-
-├── generate\_ground\_truth\_csv.py  # Script untuk ubah label .txt menjadi ground\_truth.csv
-
+OCR_Project/
+├── ocr_predict.py                # Script pembuat ground_truth.csv dari file .txt (YOLO format)
+├── generate_ground_truth.csv     # (Opsional) Output dari ocr_predict.py
+├── results.csv                   # Hasil prediksi + nilai CER
 ├── test/
-
-│   ├── test001\_1.jpg             # Gambar plat nomor
-
-│   ├── test001\_1.txt             # Label ground truth
-
-│   └── ground\_truth.csv          # CSV berisi hasil penggabungan label
-
-├── hasil\_prediksi.csv            # File output hasil OCR + evaluasi CER
-
-├── requirement.txt
-
-└── README.md
+│   ├── test001_1.jpg             # Gambar input
+│   ├── test001_1.txt             # File label YOLO (class_id dan x_center)
+│   ├── ...
+│   └── ground_truth.csv          # Hasil dari ocr_predict.py
 
 # Instalasi & Persiapan
 1. Install LM Studio
