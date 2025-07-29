@@ -7,12 +7,19 @@ Hasil prediksi dievaluasi menggunakan metrik Character Error Rate (CER) dan disi
 
 OCR_Project/
 ├── ocr_predict.py                # Script pembuat ground_truth.csv dari file .txt (YOLO format)
+
 ├── generate_ground_truth.csv     # (Opsional) Output dari ocr_predict.py
+
 ├── results.csv                   # Hasil prediksi + nilai CER
+
 ├── test/
+
 │   ├── test001_1.jpg             # Gambar input
+
 │   ├── test001_1.txt             # File label YOLO (class_id dan x_center)
+
 │   ├── ...
+
 │   └── ground_truth.csv          # Hasil dari ocr_predict.py
 
 # Instalasi & Persiapan
